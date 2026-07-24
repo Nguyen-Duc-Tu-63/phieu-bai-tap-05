@@ -171,7 +171,8 @@ button[type="submit"]:hover{
     gap: 1rem;
 }
 
-@media (min-width: 640px){ /*Query tablet*/
+/*Query tablet*/
+@media (min-width: 640px){ 
     .cm-header{
         flex-direction: row;
         justify-content: space-between;
@@ -187,4 +188,56 @@ button[type="submit"]:hover{
     .cm-grid{
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/*Query Desktop*/
+@media (min-width: 1024px){
+    .cm-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cm-main{
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+.cm-hero{
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cm-hero h2{
+    margin: 0;
+    font-size: 1.5rem;
+    max-width: 20ch;
+}
+
+.cm-btn{
+    display: inline-block;
+    background: white;
+    color: var(--cm-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.cm-btn:hover{
+    background: #f0fdfa;
+}
+
+.table-wrap{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.cm-table{
+    min-width: 640px;
 }
